@@ -1,9 +1,8 @@
-# I am a comment, and I want to say that the variable CC will be
-# the compiler to use.
+# use g++ as compiler
 CC=g++
-# Hey!, I am comment number 2. I want to say that CFLAGS will be the
-# options I'll pass to the compiler.
+# show all warnings. Use c++11 as standard
 CFLAGS=-c -Wall -std=c++11
+# link with wiringPi, boost_system und boost_thread
 LFLAGS=-lwiringPi -lboost_system -lboost_thread
 
 all: boblight
@@ -23,6 +22,5 @@ ledController.o: ledController.cpp
 networkController.o: networkController.cpp
 	$(CC) $(CFLAGS) networkController.cpp
 	
-
 clean:
 	rm -rf *o boblight
