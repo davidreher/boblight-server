@@ -59,19 +59,6 @@ void LedController::init(void) {
 	boost::thread t(boost::bind(session, this));
 }
 
-void LedController::setColor(unsigned char stripe,
-		unsigned char red,
-		unsigned char green,
-		unsigned char blue) {
-	if (true) {
-		lights[stripe - 1]->red = red;
-		lights[stripe - 1]->green = green;
-		lights[stripe - 1]->blue = blue;
-	} else {
-		this->writeColor(stripe, red, green, blue);
-	}
-}
-
 void LedController::writeColor(unsigned char stripe,
 		unsigned char red,
 		unsigned char green,

@@ -27,8 +27,8 @@ private:
 	};
 
 	enum Stripe {
-		eStripeLeft = 1,
-		eStripeTop = 2,
+		eStripeLeft = 2,
+		eStripeTop = 1,
 		eStripeRight = 3,
 	};
 };

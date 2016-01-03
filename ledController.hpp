@@ -12,8 +12,7 @@ public:
 		delete(lights[1]);
 		delete(lights[2]);
 	}
-
-	void setColor(unsigned char stripe, unsigned char red, unsigned char green, unsigned char blue);
+  
 	void writeColor(unsigned char stripe, unsigned char red, unsigned char green, unsigned char blue);
 	Light *lights[3];
 

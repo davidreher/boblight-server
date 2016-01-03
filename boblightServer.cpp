@@ -58,9 +58,11 @@ std::string BobLightServer::receive(std::string &s) {
 					blue = (unsigned char)(strtof(strs[6].c_str(), NULL) * 100);
 				ledController->setColor(stripe, red, green, blue);
 			}
-//			else if(strs[3].compare("interpolation") == 0) {
-//				ledController->lights[stripe-1]->interpolate = true;
-//			}
+#ifdef INTERPOLATION
+			else if(strs[3].compare("interpolation") == 0) {
+				ledController->lights[stripe-1]->interpolate = true;
+			}
+#endif
 #ifdef DEBUG
 			else {
 				printf("bob: received unknown set light: %s\n", s.c_str());
