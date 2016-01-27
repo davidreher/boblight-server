@@ -3,7 +3,7 @@ CC=g++
 # show all warnings. Use c++11 as standard
 CFLAGS=-c -Wall -std=c++11
 # link with wiringPi, boost_system und boost_thread
-LFLAGS=-lwiringPi -lboost_system -lboost_thread
+LFLAGS=-lwiringPi -lboost_system -lboost_thread -pthread
 
 all: boblight
 
